@@ -55,7 +55,7 @@ window.addEventListener("scroll", () => {
 /* =========================
    Active Nav Link (ScrollSpy)
 ========================= */
-const sections = ["about", "skills", "projects", "contact"].map(id => document.getElementById(id));
+const sections = ["about", "skills", "projects", "experience", "contact"].map(id => document.getElementById(id));
 const navLinks = $$(".nav__link");
 
 function setActiveLink() {
@@ -160,7 +160,7 @@ function openModal(card) {
   modalTech.textContent = card.dataset.tech || "";
   modalDesc.textContent = card.dataset.desc || "";
 
-  let links = { live: "#", code: "#" };
+  let links = { live: "https://example.com", code: "https://github.com" };
   try {
     links = JSON.parse(card.dataset.links || "{}");
   } catch {}
@@ -249,7 +249,7 @@ form.addEventListener("submit", (e) => {
   if (!validate()) return;
 
   // Demo success (front-end only)
-  note.textContent = "✅ Message ready! (Connect this form to EmailJS / backend to actually send.)";
+  note.textContent = "✅ Thanks! Your message is validated and ready to send via your backend/email service.";
   form.reset();
 });
 
