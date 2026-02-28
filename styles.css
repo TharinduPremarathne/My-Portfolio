@@ -322,6 +322,10 @@ input:focus, textarea:focus{border-color: rgba(124,58,237,0.6)}
   padding: 18px;
 }
 
+
+.contact__items{display:grid; gap:8px; margin-top:14px}
+
+
 .footer{
   border-top: 1px solid var(--border);
   padding: 22px 0;
